@@ -14,4 +14,10 @@ defmodule MyListTest do
       assert MyList.min([1, 2, 3, 4]) == 1
     end
   end
+
+  describe "mapsum from list" do
+    test "Should return 14" do
+      assert MyList.mapsum([1, 2, 3], &(&1 * &1)) == 14
+    end
+  end
 end
